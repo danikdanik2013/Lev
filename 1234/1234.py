@@ -17,7 +17,7 @@ with open ( x , 'r' , newline = '' ) as f:
                 print (row(1,2))
                 break
             else:
-                print("UNCORRECT")
+                print("UNCORRECTS")
 # input_sorted = input("Yes/No?: ")
 # if input_sorted == "Yes":
 #     sortedlist = sorted(x, key=lambda row: (row[1],row[0],row[2]), reverse=True)
