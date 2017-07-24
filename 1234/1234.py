@@ -8,11 +8,14 @@ with open ( x , 'r' , newline = '' ) as f:
         file = csv.reader(f)
         for row in file:
             if vvod == "Porsche 911":
-                print ( row[0])
-            elif vvod == "Porsher 918":
-                print (row[1])
+                print (vvod,'-',row[1])
+                break
+            elif vvod == "Porsche 918":
+                print (line)
+                break
             elif vvod == "Porsche 906":
-                print (row[2])
+                print (row(1,2))
+                break
             else:
                 print("UNCORRECT")
 # input_sorted = input("Yes/No?: ")
