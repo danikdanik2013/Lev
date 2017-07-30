@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import csv
+import pandas as pd
 
 x = '7.csv'
-word_input2 = input("Do you want to watch all list?(yes/no)")
+word_input2 = input("Do you want to watch all list?(yes/no) - ")
 if word_input2 == "yes":
     with open ( x , 'r' , newline = '' ) as f:
         file = csv.reader(f)
@@ -10,7 +11,18 @@ if word_input2 == "yes":
             a = row[0]
             print("{}".format(a))
         f.close()
-    word_input = input("Do you want get more information about this car?(yes/no)")
+    sort_input = input("Do you want to sorted list?(yes/no) ")
+    if sort_input == "yes":
+        with open(x, 'r', newline='') as f:
+            file = csv.reader(f)
+            df = pd.DataFrame(f)
+            for row in file:
+                print(df.sort_values('Alphabet'))
+                # break
+    else:
+        print("NOPE")
+    f.close()
+    word_input = input("Do you want get more information about this car?(yes/no) - ")
     if word_input == "yes":
             with open(x, 'r', newline='') as f:
                 file = csv.reader(f)
@@ -23,8 +35,8 @@ if word_input2 == "yes":
                         break
     else:
             print("OOOPS")
-
-
+def sortByAlphabet(inputStr):
+                return inputStr[0]
 
 # input_sorted = input("Yes/No?: ")
 # if input_sorted == "Yes":
