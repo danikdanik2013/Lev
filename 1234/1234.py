@@ -6,14 +6,14 @@ word_input2 = input( "Do you want to watch all list?(yes/no) - " )
 if word_input2 == "yes":
     with open ( x , 'r', newline = '' ) as f:
         file = csv.reader(f)
-        a = []
+        global_list = []
         for row in file:
-            b = row[0]
-            print( "{}".format(b) )
-            a.append(b)
+            table_row = row[0]
+            print( "{}".format(table_row) )
+            global_list.append(table_row)
         sort_input = input( "Do you want to sorted list?(yes/no) " )
         if sort_input == "yes":
-            newList = sorted(a)
+            newList = sorted(global_list)
             print("{}".format(newList))
             f.close()
         else:
